@@ -12,7 +12,7 @@ void setup()
     one.show();
     if(one.cubeNum > 0)
       //text("Sum of Dots: " + one.cubeNum,280,450);
-      one.nom = one.nom + one.cubeNum;
+      //one.nom = one.nom + one.cubeNum;
       text("Sum of Dots: " + one.nom,280,450);
       }
     }
@@ -26,8 +26,9 @@ void setup()
       int myX, myY, cubeNum, nom;
       Die(int x, int y)
       {
-        cubeNum = (int)(Math.random()*6)+1;
-        nom = nom + cubeNum;
+        //cubeNum = (int)(Math.random()*6)+1;
+        cubeNum = 0;
+        nom = 0;
         myX = x;
         myY = y;
       }
@@ -37,8 +38,8 @@ void setup()
       }
       void show()
       {
-       //int nom = 0;
-       //nom = nom + cubeNum;
+       cubeNum = (int)(Math.random()*6)+1;
+       nom = nom + cubeNum;
         fill(255);
         rect(myX,myY,50,50);
         //dots code below
