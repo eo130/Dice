@@ -5,17 +5,29 @@ void setup()
   }
   void draw()
   { 
-    background(192);
+    int nommm = 0;
+    background(#FFFCA2);
     for(int x = 10; x < 760; x += 75){
          for(int y = 10; y < 435; y += 75){
     Die one = new Die(x,y);
     one.show();
-    if(one.cubeNum > 0)
+    if(one.cubeNum == 1)
+    nommm+=1;
+    else if(one.cubeNum == 2)
+    nommm+=2;
+    else if(one.cubeNum == 3)
+    nommm+=3;
+    else if(one.cubeNum == 4)
+    nommm+=4;
+    else if(one.cubeNum == 5)
+    nommm+=5;
+    else if(one.cubeNum ==6)
+    nommm+=6;
       //text("Sum of Dots: " + one.cubeNum,280,450);
       //one.nom = one.nom + one.cubeNum;
-      text("Sum of Dots: " + one.nom,280,450);
       }
     }
+    text("Total: " + nommm,280,450);
   }
   void mousePressed()
   {
@@ -40,7 +52,7 @@ void setup()
       {
        cubeNum = (int)(Math.random()*6)+1;
        nom = nom + cubeNum;
-        fill(255);
+        fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
         rect(myX,myY,50,50);
         //dots code below
         if(cubeNum == 1){
